@@ -9,8 +9,9 @@ library(wordcloud)
 # Read csv file
 mail <- read.csv("spam_ham_dataset.csv")
 
-sum(is.na(spam))
+sum(is.na(mail))
 mail$text = str_squish(mail$text)
+table(mail$label)
 
 names(mail)[1] <- "Index"
 
